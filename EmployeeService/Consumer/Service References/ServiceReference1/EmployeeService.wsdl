@@ -134,9 +134,86 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICreateEmp_CreateEmployee_EmployeeAldreadyPresentFaultFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICreateEmp_CreateEmployee_ArgumentsEmptyFaultFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICreateEmp_ClearList_Input_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_ICreateEmp_ClearList_output_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:59496/EmployeeService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:59496/EmployeeService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/" />
       <xsd:import schemaLocation="http://localhost:59496/EmployeeService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:59496/EmployeeService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EmployeeService" />
     </xsd:schema>
@@ -146,6 +223,9 @@
   </wsdl:message>
   <wsdl:message name="IEmployeeService_GetAllEmployees_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllEmployeesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeService_GetAllEmployees_ZeroEmployeesFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/" name="detail" element="q1:ZeroEmployeesFault" />
   </wsdl:message>
   <wsdl:message name="IEmployeeService_SearchByID_InputMessage">
     <wsdl:part name="parameters" element="tns:SearchByID" />
@@ -165,10 +245,23 @@
   <wsdl:message name="ICreateEmp_CreateEmployee_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreateEmployeeResponse" />
   </wsdl:message>
+  <wsdl:message name="ICreateEmp_CreateEmployee_EmployeeAldreadyPresentFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/" name="detail" element="q2:EmployeeAldreadyPresentFault" />
+  </wsdl:message>
+  <wsdl:message name="ICreateEmp_CreateEmployee_ArgumentsEmptyFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/" name="detail" element="q3:ArgumentsEmptyFault" />
+  </wsdl:message>
+  <wsdl:message name="ICreateEmp_ClearList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearList" />
+  </wsdl:message>
+  <wsdl:message name="ICreateEmp_ClearList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearListResponse" />
+  </wsdl:message>
   <wsdl:portType name="IEmployeeService">
     <wsdl:operation name="GetAllEmployees">
       <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeService/GetAllEmployees" message="tns:IEmployeeService_GetAllEmployees_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeService/GetAllEmployeesResponse" message="tns:IEmployeeService_GetAllEmployees_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeService/GetAllEmployeesZeroEmployeesFaultFault" name="ZeroEmployeesFaultFault" message="tns:IEmployeeService_GetAllEmployees_ZeroEmployeesFaultFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="SearchByID">
       <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeService/SearchByID" message="tns:IEmployeeService_SearchByID_InputMessage" />
@@ -183,6 +276,12 @@
     <wsdl:operation name="CreateEmployee">
       <wsdl:input wsaw:Action="http://tempuri.org/ICreateEmp/CreateEmployee" message="tns:ICreateEmp_CreateEmployee_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICreateEmp/CreateEmployeeResponse" message="tns:ICreateEmp_CreateEmployee_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICreateEmp/CreateEmployeeEmployeeAldreadyPresentFaultFault" name="EmployeeAldreadyPresentFaultFault" message="tns:ICreateEmp_CreateEmployee_EmployeeAldreadyPresentFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICreateEmp/CreateEmployeeArgumentsEmptyFaultFault" name="ArgumentsEmptyFaultFault" message="tns:ICreateEmp_CreateEmployee_ArgumentsEmptyFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICreateEmp/ClearList" message="tns:ICreateEmp_ClearList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICreateEmp/ClearListResponse" message="tns:ICreateEmp_ClearList_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IEmployeeService" type="tns:IEmployeeService">
@@ -195,6 +294,9 @@
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="ZeroEmployeesFaultFault">
+        <soap:fault use="literal" name="ZeroEmployeesFaultFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="SearchByID">
       <soap:operation soapAction="http://tempuri.org/IEmployeeService/SearchByID" style="document" />
@@ -226,6 +328,25 @@
       </wsdl:input>
       <wsdl:output>
         <wsp:PolicyReference URI="#WSHttpBinding_ICreateEmp_CreateEmployee_output_policy" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmployeeAldreadyPresentFaultFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICreateEmp_CreateEmployee_EmployeeAldreadyPresentFaultFault_Fault" />
+        <soap12:fault use="literal" name="EmployeeAldreadyPresentFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ArgumentsEmptyFaultFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_ICreateEmp_CreateEmployee_ArgumentsEmptyFaultFault_Fault" />
+        <soap12:fault use="literal" name="ArgumentsEmptyFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ClearList">
+      <soap12:operation soapAction="http://tempuri.org/ICreateEmp/ClearList" style="document" />
+      <wsdl:input>
+        <wsp:PolicyReference URI="#WSHttpBinding_ICreateEmp_ClearList_Input_policy" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsp:PolicyReference URI="#WSHttpBinding_ICreateEmp_ClearList_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>

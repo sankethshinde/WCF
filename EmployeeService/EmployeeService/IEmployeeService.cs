@@ -11,12 +11,15 @@ namespace EmployeeService
     [ServiceContract]
     public interface IEmployeeService
     {
+        [FaultContract(typeof(ZeroEmployeesFault))]
         [OperationContract]
         List<Employee> GetAllEmployees();
 
+        [FaultContract(typeof(EmployeeIsNotPresentFault))]
         [OperationContract(Name= "SearchByID")]
         Employee GetEmployeeDetails(int id);
 
+        [FaultContract(typeof(EmployeeIsNotPresentFault))]
         [OperationContract(Name="SearchByName")]
         Employee GetEmployeeDetails(string name);
     }
@@ -24,8 +27,15 @@ namespace EmployeeService
     [ServiceContract]
     public interface ICreateEmp
     {
+        [FaultContract(typeof(ArgumentsEmptyFault))]
+        [FaultContract(typeof(EmployeeAldreadyPresentFault))]
         [OperationContract]
         int CreateEmployee(string name,int id,string remarkDetails,DateTime remarkDate);
+
+        [OperationContract]
+        void ClearList();
+
+        
     }
 
 

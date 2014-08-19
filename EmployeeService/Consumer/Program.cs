@@ -18,7 +18,8 @@ namespace Consumer
                     Console.WriteLine("2.Display All Employees list \n");
                     Console.WriteLine("3.Display Employees by id \n");
                     Console.WriteLine("4.Display Employees by name \n");
-                    Console.WriteLine("5.Exit");
+                    Console.WriteLine("5.Clear List of Employees");
+                    Console.WriteLine("6.Exit");
                     Console.WriteLine("Enter ur choice: ");
                     choice = int.Parse(Console.ReadLine());
                     var client = new CreateEmpClient("WSHttpBinding_ICreateEmp");
@@ -69,8 +70,12 @@ namespace Consumer
                             Console.WriteLine(employee2.RemarkDetails);
                             Console.WriteLine(employee2.RemarkDate);
                             break;
+
+                        case 5:
+                            client.ClearList();
+                            break;
                 }
-                } while (choice != 5);
+                } while (choice != 6);
            }
         }
     }

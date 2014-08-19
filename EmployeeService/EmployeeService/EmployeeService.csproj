@@ -65,11 +65,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArgumentsEmptyFault.cs" />
+    <Compile Include="EmployeeAldreadyPresentFault.cs" />
+    <Compile Include="EmployeeIsNotPresentFault.cs" />
     <Compile Include="EmployeeService.svc.cs">
       <DependentUpon>EmployeeService.svc</DependentUpon>
     </Compile>
     <Compile Include="IEmployeeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZeroEmployeesFault.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

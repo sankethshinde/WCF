@@ -58,4 +58,14 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ClearList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearListResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

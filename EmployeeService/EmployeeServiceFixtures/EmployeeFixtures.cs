@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using EmployeeServiceFixtures.ServiceReference1;
+using System.ServiceModel;
 
 namespace EmployeeServiceFixtures
 {
@@ -8,25 +9,66 @@ namespace EmployeeServiceFixtures
     public class EmployeeFixtures
     {
         [TestMethod]
-        [ExpectedException(typeof(System.ServiceModel.FaultException))]
-        public void BlankArgumentsShouldThrowArgumentNullException()
+        [ExpectedException(typeof(System.ServiceModel.FaultException<ArgumentsEmptyFault>))]
+        public void BlankArgumentsShouldThrowArgumentsEmptyException()
         {
-            var EmployeeServiceClient = new CreateEmpClient("WSHttpBinding_ICreateEmp");
+            var employeeServiceClient = new CreateEmpClient("WSHttpBinding_ICreateEmp");
+            string error = string.Empty;
             string name = string.Empty;
             int id = 1;
             string remark = string.Empty;
-            int isSuccess = EmployeeServiceClient.CreateEmployee(name, id, remark, DateTime.Now);
-            
-         }
+            employeeServiceClient.CreateEmployee(name, id, remark, DateTime.Now);
+        }
+        
         [TestMethod]
-        public void SuccessfulAdditionofEmployeeReturnsOne()
+        [ExpectedException(typeof(System.ServiceModel.FaultException<EmployeeAldreadyPresentFault>))]
+        public void EmployeeWithSameIdShouldNotBeAdded()
         {
-            var EmployeeServiceClient = new CreateEmpClient("WSHttpBinding_ICreateEmp");
+            var employeeServiceClient = new CreateEmpClient("WSHttpBinding_ICreateEmp");
             string name = "sanket";
             int id = 1;
             string remark = "very good";
-            int isSuccess = EmployeeServiceClient.CreateEmployee(name, id, remark, DateTime.Now);
-            Assert.AreEqual(isSuccess, 1);
+            string errorCode=string.Empty;
+            employeeServiceClient.CreateEmployee(name, id, remark, DateTime.Now);
+            employeeServiceClient.CreateEmployee(name, id, remark, DateTime.Now);
         }
+        [TestMethod]
+        [ExpectedException(typeof(System.ServiceModel.FaultException<ZeroEmployeesFault>))]
+        public void ListWithZeroEmployeesShouldReturnProperMessage()
+        {
+            var employeeServiceClient = new EmployeeServiceClient("BasicHttpBinding_IEmployeeService");
+            var clearList = new CreateEmpClient("WSHttpBinding_ICreateEmp");
+            clearList.ClearList();
+            employeeServiceClient.GetAllEmployees();
+        }
+        [TestMethod]
+        [ExpectedException(typeof(System.ServiceModel.FaultException<EmployeeIsNotPresentFault>))]
+        public void ProperMessageShouldbeReturnedIfEmployeeWithGivenIdIsNotPresent()
+        {
+            var employeeServiceClient = new EmployeeServiceClient("BasicHttpBinding_IEmployeeService");
+            var createClient = new CreateEmpClient("WSHttpBinding_ICreateEmp");
+            createClient.ClearList();
+            string name = "swapnil";
+            int id = 3;
+            string remark = "funny guy";
+            createClient.CreateEmployee(name, id, remark, DateTime.Now);
+            int randomId=98;
+            employeeServiceClient.SearchByID(randomId);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(System.ServiceModel.FaultException<EmployeeIsNotPresentFault>))]
+        public void ProperMessageShouldBeReturnedIfEmployeeWithGivenNameIsNotPresent()
+        {
+            var employeeServiceClient = new EmployeeServiceClient("BasicHttpBinding_IEmployeeService");
+            var createClient = new CreateEmpClient("WSHttpBinding_ICreateEmp");
+            createClient.ClearList();
+            string name = "kunal";
+            int id = 5;
+            string remark = "comedy guy";
+            createClient.CreateEmployee(name, id, remark, DateTime.Now);
+            string empName = "zzz";
+            employeeServiceClient.SearchByName(empName);
+        }
+
     }
 }
