@@ -1,0 +1,12 @@
+E:\Employee Management Service\EmployeeService\EmployeeServiceFixtures\bin\Debug\EmployeeServiceFixtures.dll.config
+E:\Employee Management Service\EmployeeService\EmployeeServiceFixtures\bin\Debug\EmployeeServiceFixtures.dll
+E:\Employee Management Service\EmployeeService\EmployeeServiceFixtures\bin\Debug\EmployeeServiceFixtures.pdb
+E:\Employee Management Service\EmployeeService\EmployeeServiceFixtures\obj\Debug\EmployeeServiceFixtures.csprojResolveAssemblyReference.cache
+E:\Employee Management Service\EmployeeService\EmployeeServiceFixtures\obj\Debug\EmployeeServiceFixtures.dll
+E:\Employee Management Service\EmployeeService\EmployeeServiceFixtures\obj\Debug\EmployeeServiceFixtures.pdb
+C:\Users\sshinde\Desktop\WCF\EmployeeService\EmployeeServiceFixtures\bin\Debug\EmployeeServiceFixtures.dll.config
+C:\Users\sshinde\Desktop\WCF\EmployeeService\EmployeeServiceFixtures\bin\Debug\EmployeeServiceFixtures.dll
+C:\Users\sshinde\Desktop\WCF\EmployeeService\EmployeeServiceFixtures\bin\Debug\EmployeeServiceFixtures.pdb
+C:\Users\sshinde\Desktop\WCF\EmployeeService\EmployeeServiceFixtures\obj\Debug\EmployeeServiceFixtures.csprojResolveAssemblyReference.cache
+C:\Users\sshinde\Desktop\WCF\EmployeeService\EmployeeServiceFixtures\obj\Debug\EmployeeServiceFixtures.dll
+C:\Users\sshinde\Desktop\WCF\EmployeeService\EmployeeServiceFixtures\obj\Debug\EmployeeServiceFixtures.pdb
