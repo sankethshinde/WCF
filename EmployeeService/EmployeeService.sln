@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeServiceFixtures", "
 		{F7732AE6-F843-4B11-8B36-D51A02B9435B} = {F7732AE6-F843-4B11-8B36-D51A02B9435B}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validator", "Validator\Validator.csproj", "{58AABF4B-3529-4D67-989A-F8839EBB8A54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{69B81463-256C-4D81-8C36-1F44FC9794AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69B81463-256C-4D81-8C36-1F44FC9794AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69B81463-256C-4D81-8C36-1F44FC9794AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58AABF4B-3529-4D67-989A-F8839EBB8A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58AABF4B-3529-4D67-989A-F8839EBB8A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58AABF4B-3529-4D67-989A-F8839EBB8A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58AABF4B-3529-4D67-989A-F8839EBB8A54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

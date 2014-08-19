@@ -13,6 +13,7 @@ namespace EmployeeServiceFixtures
         public void BlankArgumentsShouldThrowArgumentsEmptyException()
         {
             var employeeServiceClient = new CreateEmpClient("WSHttpBinding_ICreateEmp");
+            employeeServiceClient.ClearList();
             string error = string.Empty;
             string name = string.Empty;
             int id = 1;

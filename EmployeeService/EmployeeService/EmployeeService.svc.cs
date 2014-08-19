@@ -37,7 +37,7 @@ namespace EmployeeService
                 argumentsEmptyFault.Details = " Arguments for create Employee function cannot be Empty";
                 throw new FaultException<ArgumentsEmptyFault>(argumentsEmptyFault);
             }
-            else if (exists)
+            else if(exists)
             {
                 EmployeeAldreadyPresentFault idAldreadyPresentFault = new EmployeeAldreadyPresentFault();
                 idAldreadyPresentFault.Error = "EmployeeAldreadyPresentFault";
@@ -54,6 +54,7 @@ namespace EmployeeService
                 employeeList.Add(obj);
                 return 1;
             }
+
         }
 
 

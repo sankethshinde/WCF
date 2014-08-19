@@ -8,3 +8,5 @@ C:\Users\sshinde\Desktop\WCF\EmployeeService\EmployeeService\bin\EmployeeService
 C:\Users\sshinde\Desktop\WCF\EmployeeService\EmployeeService\obj\Debug\EmployeeService.csprojResolveAssemblyReference.cache
 C:\Users\sshinde\Desktop\WCF\EmployeeService\EmployeeService\obj\Debug\EmployeeService.dll
 C:\Users\sshinde\Desktop\WCF\EmployeeService\EmployeeService\obj\Debug\EmployeeService.pdb
+C:\Users\sshinde\Desktop\WCF\EmployeeService\EmployeeService\bin\Validator.dll
+C:\Users\sshinde\Desktop\WCF\EmployeeService\EmployeeService\bin\Validator.pdb

@@ -1,0 +1,5 @@
+C:\Users\sshinde\Desktop\WCF\EmployeeService\Validator\obj\Debug\Validator.csprojResolveAssemblyReference.cache
+C:\Users\sshinde\Desktop\WCF\EmployeeService\Validator\bin\Debug\Validator.dll
+C:\Users\sshinde\Desktop\WCF\EmployeeService\Validator\bin\Debug\Validator.pdb
+C:\Users\sshinde\Desktop\WCF\EmployeeService\Validator\obj\Debug\Validator.dll
+C:\Users\sshinde\Desktop\WCF\EmployeeService\Validator\obj\Debug\Validator.pdb
